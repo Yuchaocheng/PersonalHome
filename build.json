@@ -14,5 +14,11 @@
         "libraryName": "@alifd/next"
       }
     ]
-  ]
+  ],
+  "proxy": {
+    "/**": {
+      "enable": true,
+      "target": "http://127.0.0.1:3000"
+    }
+  }
 }
