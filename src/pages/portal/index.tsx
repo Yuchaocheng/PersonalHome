@@ -5,6 +5,7 @@ import { useRequest } from 'ice';
 import { getCaptcha } from '@/service/login';
 import classNames from 'classnames/bind';
 import style from './index.module.less';
+import store from '@/store';
 
 const cx = classNames.bind(style);
 
@@ -17,10 +18,19 @@ const formItemLayout = {
     span: 14,
   },
 };
-export const Portal = (props: PortalProps) => {
+export default (props: PortalProps) => {
   const { data, request } = useRequest(getCaptcha);
   useEffect(() => {
     request();
+  }, []);
+
+  const [userState, userDispatchers] = store.useModel('user');
+
+  useEffect(() => {
+    console.log(111,'11111');
+    
+    // 触发 dispatcher 获取数据并修改 state
+    userDispatchers.getUserInfo();
   }, []);
   return (
     <Form style={{ width: '60%' }} {...formItemLayout} colon>
