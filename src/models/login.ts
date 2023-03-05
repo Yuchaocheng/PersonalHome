@@ -1,15 +1,14 @@
 import { createModel } from 'ice';
-interface User {
-    name: string;
+interface login {
     sid: string;
 }
 
 export default createModel({
     // 定义  model 的初始 state
     state: {
-      name: '',
+      // sid: localStorage.getItem('sid'),
       sid: '',
-    } as User,
+    } as login,
     // 定义改变该 model 状态的纯函数
     reducers: {
       update(state, payload) {
@@ -22,10 +21,8 @@ export default createModel({
     // 定义处理该 model 副作用的函数
     effects: (dispatch) => ({
       async getUserInfo() {
-        await delay(1000);
         this.update({
-          name: 'taobao',
-          id: '123',
+          sid: 'taobao',
         });
       },
     }),

@@ -10,5 +10,26 @@ export default defineConfig(() => ({
   plugins: [
     request(),
     store(),
-  ]
+  ],
+  proxy: {
+    '/api': {
+      target: 'http://127.0.0.1:3000',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' }
+    },
+  },
+  externals: {
+    lodash: '_',
+    moment: 'moment',
+    react: 'React',
+    'react-dom': 'ReactDOM',
+    '@alifd/next': 'Next',
+  },
+  routes: {
+    ignoreFiles: [
+      '**/components/**',   // 如果每个页面下有 components 目录存放当前页面的组件，可以通过添加此配置忽略被解析成路由组件
+    ],
+  },
+  ssr: false,
+  ssg: false,
 }));

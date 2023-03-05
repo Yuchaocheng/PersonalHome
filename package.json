@@ -7,7 +7,9 @@
     "@ice/plugin-request": "^1.0.0",
     "@ice/runtime": "^1.0.0",
     "@ice/store": "^2.0.3",
+    "@iceworks/spec": "^1.6.0",
     "classnames": "^2.3.2",
+    "eslint": "^8.35.0",
     "immer": "^9.0.19",
     "lodash.isfunction": "^3.0.9",
     "moment": "^2.29.4",
@@ -15,7 +17,8 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "redux": "^4.2.1",
-    "redux-thunk": "^2.4.2"
+    "redux-thunk": "^2.4.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@ice/app": "^3.0.0",
@@ -25,7 +28,7 @@
     "@types/react-dom": "^18.0.0"
   },
   "scripts": {
-    "start": "ice start",
+    "start": "ice start --port 8888",
     "build": "ice build"
   },
   "private": true,

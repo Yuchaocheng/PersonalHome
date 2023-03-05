@@ -1,5 +1,4 @@
 import { createStore } from 'ice';
-import user from './models/user';
+import login from './models/login';
 
-console.log('===createStore', createStore);
-export default createStore({ user });
+export default createStore({ login });
