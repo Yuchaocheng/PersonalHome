@@ -18,7 +18,7 @@ export const requestConfig = defineRequestConfig({
             onConfig: (response) => {
                 const { data } = response;
                 if (data.errorCode) {
-                    return Promise.reject(response)
+                    return Promise.reject(data)
                 }
                 return {
                     ...response,
