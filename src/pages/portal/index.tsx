@@ -4,7 +4,6 @@ import style from './index.module.less';
 
 const cx = classNames.bind(style);
 
-
 export default (props: any) => {
-  return <></>
+  return <></>;
 };
