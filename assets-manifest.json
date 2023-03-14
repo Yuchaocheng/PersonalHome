@@ -1,9 +1,9 @@
 {
-  "publicPath": "/",
+  "publicPath": "PersonalHome",
   "entries": {
     "main": [
       "js/framework.js",
-      "js/324.js",
+      "js/645.js",
       "css/main.css",
       "js/main.js"
     ]
