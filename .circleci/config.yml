@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node
+    # 选择分支
     branches:
       only:
         - master
@@ -12,10 +13,28 @@ jobs:
             - '3f:5b:8a:a4:36:86:83:38:31:79:a8:bb:43:08:2f:c6'
       - run: echo "A first hello"
       - run: npm -v
+      # 拉取代码
       - checkout
+      - restore_cache:
+          keys:
+            - dependencies_circleci
       - run:
           name: Install
           command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: dependencies_circleci
       - run:
           name: Build
           command: npm run build
+      - run:
+          name: Prepare shell commands
+          # shell chmod + x 赋予执行权限
+          # 执行shell脚本
+          command: chmod +x scripts/deploy.sh
+      - run:
+          name: Run Deploy to Github pages
+          command: ./scripts/deploy.sh
+
+
