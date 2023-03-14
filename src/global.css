@@ -1,7 +1,0 @@
-body {
-  -webkit-font-smoothing: antialiased;
-
-  /* 修改fusion变量 */
-  --shell-brand-header-background: rgba(0, 0, 0, 0.3);
-  --shell-brand-content-background: transparent;
-}
