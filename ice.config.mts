@@ -32,4 +32,5 @@ export default defineConfig(() => ({
   },
   ssr: false,
   ssg: false,
+  publicPath: 'PersonalHome',
 }));

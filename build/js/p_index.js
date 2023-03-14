@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_ice_lite_scaffold=self.webpackChunk_ice_lite_scaffold||[]).push([[767],{5758:function(e,n,t){t.r(n),t.d(n,{default:function(){return l}});var u=t(4041),f=t(9678),c=t(7363),i=t(3903);function l(){return(0,c.useEffect)(function(){null===i.m8||void 0===i.m8||i.m8.push("/portal/login")},[]),(0,u.tZ)(f.Fragment,{})}}}]);
