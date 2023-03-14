@@ -13,8 +13,8 @@ jobs:
       - run: echo "A first hello"
       - run: npm -v
       - run:
-        name: Install
-        command: tnpm install
+          name: Install
+          command: tnpm install
       - run:
-        name: Build
-        command: tnpm run build
+          name: Build
+          command: tnpm run build
