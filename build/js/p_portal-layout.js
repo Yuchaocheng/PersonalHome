@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_ice_lite_scaffold=self.webpackChunk_ice_lite_scaffold||[]).push([[669],{7206:function(e,t,n){n.r(t),n.d(t,{default:function(){return i}});var c=n(4041),f=n(9678),u=n(3903);function i(){return(0,c.tZ)(f.Fragment,{children:(0,c.tZ)(u.j3,{})})}}}]);
